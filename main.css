@@ -12,7 +12,7 @@
 .header{
     width: 100vw;
     height: 10vh;
-    background: rgb(152, 148, 148);
+    background: rgb(62, 59, 59);
     display: flex;
     align-items: center;
     position: fixed;
@@ -68,12 +68,12 @@
     width: 150px;
     font-size: 20px;
     height: 40px;
-    border: 1px solid black;
+    border: 1px solid rgb(123, 118, 118);
     justify-content: center;
     --b: 0.1em;   /* the thickness of the line */
     --c: #fff; /* the color */
     
-    color: #0000;
+    color: #484848;
     padding-block: var(--b);
     background: 
       linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
@@ -84,9 +84,10 @@
 }
 .lts-gt-std-btn:hover{
     cursor: pointer;
+    color: #fff;
     --_p: 100%;
     --_s: .3s;
-    border: 1px solid rgb(173, 118, 118);
+    border: 1px solid rgb(8, 8, 8);
 }
 .mainBody{
     display: flex;
@@ -97,7 +98,7 @@
     width: auto;
     display: flex;
     justify-content: center;
-    background: rgb(173, 118, 118);
+    background: rgb(9, 9, 9);
 }
 .profile{
     width: fit-content;
@@ -113,7 +114,7 @@
     justify-content: center;
 }
 .name h1{
-    color: #484848;
+    color: #24b7c8;
     font-size: 50px;
     font-weight: bold;
     font-family: monospace;
@@ -156,16 +157,18 @@
     margin-top: 30px;
   }
   .about{
-    height: 720px;
+    height: 600px;
     width: 100vw;
-    background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+    background: rgb(9, 9, 9);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 50px;
   }
   .aboutBody{
     height: 60%;
-    width: 50vw;
+    width: 55vw;
     background: #edece8;
     display: flex;
     flex-direction: row;
@@ -173,17 +176,35 @@
   .AboutSection{
     height: 100%;
     width: 40%;
-    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(233, 148, 11);
+  }
+  .profilePic{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+  }
+  .aboutName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
   }
   .AboutDiscription{
     height: 100%;
     width: 60%;
-    background:black;
+    background:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
   }
   .experience{
     height: 720px;
     width: 100vw;
-    background:red;
+    background: rgb(9, 9, 9);
   }
   .projects{
     height: 720px;
@@ -281,4 +302,7 @@
   .about-btn:hover {
     color: #4CAF50  ;
     transform: rotate(22deg);
+  }
+  .aboutDiv{
+    
   }
