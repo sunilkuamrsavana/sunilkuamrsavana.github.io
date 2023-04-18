@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunil Kumar</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
 window.smoothScroll = function(target) {
     var scrollContainer = target;
@@ -27,7 +28,23 @@ window.smoothScroll = function(target) {
     }
     // start scrolling
     scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+};
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+};
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
 </head>
 <body>
@@ -45,6 +62,18 @@ window.smoothScroll = function(target) {
             </div>
         </div>
         <div class="mainBody">
+            <div class="socialProfiles">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <span></span>
+            </div>
+            <div class="MainEmail">
+                <a href="mailto:savanasuneelkumar@gmail.com">savanasuneelkumar@gmail.com</a>
+                <span></span>
+            </div>
             <div class="body" id="home" >
                 <div class="profile">
                     <div class="name">
@@ -60,9 +89,9 @@ window.smoothScroll = function(target) {
                 </div>
             </div>
             <div class="about" id="about">
-                <div
-                    style="display: flex;margin: 0px;padding: 0px; font-size: 50px;color: white;font-weight: bold;margin-top: 20px;">
-                    ABOUT ME</div>
+                <div style="display: flex;margin: 0px;padding: 0px; font-size: 50px;color: white;font-weight: bold;margin-top: 20px;">
+                    ABOUT ME
+                </div>
                 <div class="aboutBody">
                     <div class="AboutSection">
                         <div style="display: flex;flex-direction: column;gap: 10px;">
@@ -75,44 +104,58 @@ window.smoothScroll = function(target) {
                     </div>
                     <div class="aboutDiscription">
                         <p style="font-size: 30px; text-decoration: underline;margin-top: 30px;margin-left: 30px;">
-                            Education</p>
-                        <div
-                            style="display: flex;flex-direction: column;margin-left: 30px;margin-top: 20px;width: fit-content;height: fit-content;gap: 10px;">
+                            Education
+                        </p>
+                        <div style="display: flex;flex-direction: column;margin-left: 30px;margin-top: 20px;width: fit-content;height: fit-content;gap: 10px;">
                             <p style="padding: 0px;margin: 0px; font-size: 20px;color: grey; font-weight: bold;">
-                                Hindustan institute of technology and science</p>
+                                Hindustan institute of technology and science
+                            </p>
                             <p style="width: fit-content;font-weight: 500;">Bachelor's in Electronics and
-                                communication<br>Chennai,India</p>
+                                communication<br>Chennai,India
+                            </p>
                         </div>
                         <div style="display: flex;flex-direction: column;margin-left: 30px;margin-top: 20px;width: fit-content;height: fit-content;gap: 10px;">
                             <p style="padding: 0px;margin: 0px; font-size: 20px;color: grey; font-weight: bold;">
-                                Narayana Juniour Collage</p>
+                                Narayana Juniour Collage
+                            </p>
                             <p style="width: fit-content;font-weight: 500;">Maths,Physics and
-                                Chemistry<br>AndraPradesh,India</p>
+                                Chemistry<br>AndraPradesh,India
+                            </p>
                         </div>
-                            <div class="flex-center">
-                                <i class="fa fa-github fa-4x icon-3d"></i>
-                                <i class="fa fa-gitlab fa-4x icon-3d"></i>
-                                <i class="fa fa-bitbucket fa-4x icon-3d"></i>
-                                <i class="fa fa-git fa-4x icon-3d"></i>
-                              </div>
-                              
-                              <div class="flex-center">
-                                <i class="fa fa-twitter fa-4x icon-3d"></i>
-                                <i class="fa fa-facebook fa-4x icon-3d"></i>
-                                <i class="fa fa-instagram fa-4x icon-3d"></i>
-                                <i class="fa fa-whatsapp fa-4x icon-3d"></i>
-                              </div>
+                        <p style="font-size: 30px; text-decoration: underline;margin-top: 10px;margin-left: 30px;">
+                            Summary
+                        </p>
+                        <p style="margin-left: 30px; color: rgb(6, 5, 5); margin-top: 5px; font-weight: 500;">
+                            A result- orientated professional with hands-on experience in spearheading Web application development, Front-end Projects
+                        </p>
                     </div>
                 </div>
-            </div>
+            </div>    
             <div class="experience" id="experience">
-
+                    <div class="container">
+                        <input type="radio" name="tabs" id="tab_3"/>
+                        <label class="lable" for="tab_3">
+                          <div class="content">Where i have worked</div>
+                        </label>
+                        <input type="radio" name="tabs" id="tab_2"/>
+                        <label for="tab_2">
+                          <div class="content">Hello, I'm #</div>
+                        </label>
+                        <input type="radio" name="tabs" id="tab_1"/>
+                        <label for="tab_1">
+                          <div class="content">Hello, I'm #</div>
+                        </label>
+                        <input type="radio" name="tabs" id="tab_0"></input>
+                        <label for="tab_0">
+                          <div class="content"><div style="height: 2px;width: 80px;background: white; display: flex;"></div>Where i have worked</div>
+                        </label>
+                      </div>
             </div>
             <div class="projects" id="projects">
 
             </div>
             <div class="contact" id="contact">
-
+   
             </div>
         </div>
     </div>
