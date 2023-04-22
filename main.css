@@ -12,10 +12,51 @@
 .header{
     width: 100vw;
     height: 10vh;
-    background: rgb(62, 59, 59);
+    background: rgb(9, 9, 9);
     display: flex;
-    align-items: center;
     position: fixed;
+    align-items: center;
+}
+::-webkit-scrollbar {
+  width: 20px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(9, 9, 9);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+  cursor: pointer;
+}
+@media screen and (max-width: 1150px) {
+  div.socialProfiles {
+    display: none;
+  }
+  div.MainEmail {
+    display: none;
+  }
+  div.head-btn-grp {
+    display: none;
+  }
+  div.resume{
+    display: none;
+  }
+  div.bars{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: end;
+    margin-right: 40px;
+  }
 }
 .MainEmail{
   display: flex;
@@ -41,7 +82,7 @@
 }
 .MainEmail span{
   height: 100px;
-  width: 5px;
+  width: 2px;
   background-color: white;
 }
 .socialProfiles{
@@ -55,6 +96,7 @@
   bottom: 0%;
   left: 3%;
   float:right;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
 }
 .socialProfiles i{
   font-size: 25px;
@@ -64,30 +106,35 @@
   font-size: 35px;
   color: #5890FF;
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
 }
 .socialProfiles :nth-child(2):hover{
   font-size: 40px;
   color:  #833AB4;
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
 }
 .socialProfiles :nth-child(3):hover{
   font-size: 40px;
   color: rgb(61, 60, 60);
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
 }
 .socialProfiles :nth-child(4):hover{
   font-size: 40px;
   color: red;
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
 }
 .socialProfiles :nth-child(5):hover{
   font-size: 40px;
   color: #5890FF;
   cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1)
 }
 .socialProfiles span{
   height: 100%;
-  width: 5px;
+  width: 2px;
   background-color: white;
 }
 .resume{
@@ -133,7 +180,12 @@
     width: 100%;
     height: 4px;
 }
-
+.bars{
+  font-size: 35px;
+  color: #edece8;
+  cursor: pointer;
+  display: none;
+}
 .lts-gt-std-btn{
     display: flex;
     background: transparent;
@@ -174,7 +226,7 @@
     background: rgb(9, 9, 9);
 }
 .profile{
-    width: fit-content;
+    width: 70vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -186,6 +238,10 @@
     align-items: center;
     justify-content: center;
 }
+.I{
+  transition: .5s linear;
+  margin-left: 0px;
+}
 .name h1{
     color: #24b7c8;
     font-size: 50px;
@@ -196,7 +252,7 @@
     letter-spacing: 7px;
     cursor: pointer
   }
-  .name h1 span{
+  .name h1 .sunil{
     transition: .5s linear;
     margin-left: 20px;
   }
@@ -312,211 +368,15 @@
     align-items: center;
     color: white;
   }
-.container {
-    position: relative;
-    width: 700px;
-    height: 400px;
- }
- .container input[type=radio] {
-    display: none;
- }
-.container input[type=radio]:checked + label ~ label:nth-child(2) {
-    width: 78px;
- }
- .container input[type=radio]:checked + label ~ label:nth-child(2) .content {
-    -webit-transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    opacity: 0;
-    pointer-events: none;
- }
-.container input[type=radio] + label {
-    position: absolute;
-    height: 100%;
-    box-shadow: 2px 0px 4px -2px #000;
-    cursor: pointer;
-    -webit-transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
- }
-.container input[type=radio] + label:nth-child(2) {
-    box-shadow: none;
- }
-.container input[type=radio] + label:nth-child(2) {
-    width: 700px;
-    background: #9575cd;
- }
-.container input[type=radio] + label .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 250px;
-    margin-left: -125px;
-    text-align: center;
- }
-.container input[type=radio] + label .content:after {
-    content: '';
- }
-.container input[type=radio]:checked + label ~ label:nth-child(4) {
-    width: 54px;
- }
-.container input[type=radio]:checked + label ~ label:nth-child(4) .content {
-    -webit-transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    opacity: 0;
-    pointer-events: none;
- }
-.container input[type=radio] + label {
-    position: absolute;
-    height: 100%;
-    box-shadow: 2px 0px 4px -2px #000;
-    cursor: pointer;
-    -webit-transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
- }
-.container input[type=radio] + label:nth-child(2) {
-    box-shadow: none;
- }
-.container input[type=radio] + label:nth-child(4) {
-    width: 676px;
-    background: #64b5f6;
- }
-.container input[type=radio] + label:nth-child(4):after {
-    position: absolute;
-    content: 'Anora';
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 50%;
-    left: 100%;
-    width: 18px;
-    height: 75px;
-    writing-mode: vertical-lr;
-    border-radius: 0 7.5px 7.5px 0;
-    background: #64b5f6;
-    box-shadow: 3px 0px 6px -3px #000;
- }
-.container input[type=radio] + label .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 250px;
-    margin-left: -125px;
-    counter-increment: tab-counter -1;
-    text-align: center;
- }
-.container input[type=radio] + label .content:after {
-    content: "",
- }
-.container input[type=radio]:checked + label ~ label:nth-child(6) {
-    width: 30px;
- }
-.container input[type=radio]:checked + label ~ label:nth-child(6) .content {
-    -webit-transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    opacity: 0;
-    pointer-events: none;
- }
-.container input[type=radio] + label {
-    position: absolute;
-    height: 100%;
-    box-shadow: 2px 0px 4px -2px #000;
-    cursor: pointer;
-    -webit-transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
- }
-.container input[type=radio] + label:nth-child(2) {
-    box-shadow: none;
- }
-.container input[type=radio] + label:nth-child(6) {
-    width: 652px;
-    background: #81c784;
- }
-.container input[type=radio] + label:nth-child(6):after {
-    position: absolute;
-    content: 'Internship';
-    top: 25%;
-    left: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    writing-mode: vertical-lr;
-    width: 18px;
-    height: 75px;
-    border-radius: 0 7.5px 7.5px 0;
-    background: #81c784;
-    box-shadow: 3px 0px 6px -3px #000;
- }
-.container input[type=radio] + label .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 250px;
-    margin-left: -125px;
-    counter-increment: tab-counter -1;
-    text-align: center;
- }
-.container input[type=radio] + label .content:after {
-    content: ""
- }
- .container input[type=radio]:checked + label ~ label:nth-child(8) {
-    width: 6px;
- }
-.container input[type=radio]:checked + label ~ label:nth-child(8) .content {
-    -webit-transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: opacity 0.4s cubic-bezier(0.11, 0.65, 0.04, 1);
-    opacity: 0;
-    pointer-events: none;
- }
-.container input[type=radio] + label {
-    position: absolute;
-    height: 100%;
-    box-shadow: 2px 0px 4px -2px #000;
-    cursor: pointer;
-    -webit-transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
-    transition: width 1.2s cubic-bezier(0.11, 0.65, 0.04, 1);
- }
-.container input[type=radio] + label:nth-child(2) {
-    box-shadow: none;
- }
-.container input[type=radio] + label:nth-child(8) {
-    width: 628px;
-    background: #e57373;
- }
- .lable::after{
-  content: "hello";
- }
-.container input[type=radio] + label:nth-child(8):after {
-    position: absolute;
-    content: '';
-    top: 0%;
-    left: 100%;
-    width: 18px;
-    height: 75px;
-    border-radius: 0 7.5px 7.5px 0;
-    background: #e57373;
-    box-shadow: 3px 0px 6px -3px #000;
- }
-.container input[type=radio] + label .content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 250px;
-    margin-left: -125px;
-    counter-increment: tab-counter -1;
-    text-align: center;
- }
-.container input[type=radio] + label .content:after {
-    content:"";
- }
-  
   .projects{
     height: 720px;
     width: 100vw;
-    background: blue;
+    background: rgb(9, 9, 9);
   }
   .contact{
     height: 720px;
     width: 100vw;
-    background: purple;
+    background: rgb(9, 9, 9);
   }
   .card {
     background: #fff;
@@ -605,3 +465,4 @@
     color: #4CAF50  ;
     transform: rotate(22deg);
   }
+  
