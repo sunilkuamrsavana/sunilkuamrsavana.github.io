@@ -357,7 +357,7 @@
   }
   .experience{
     width: 100vw;
-    height: 600px;
+    height: 780px;
     background: rgb(9, 9, 9);
     display: flex;
     flex-direction: column;
@@ -395,13 +395,23 @@
     font-size: 30px;
     font-weight: 400;
   }
-  
-  .projects{
-    height: 720px;
-    width: 100vw;
-    background: rgb(9, 9, 9);
+  .experienceDiscription ul{
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px ;
+    overflow: hidden;
+    list-style: none;
   }
-  .contact{
+  .experienceDiscription ul li{
+    margin-top: 5px;
+  }
+  .experienceDiscription ul li::before{
+    content: "▹";
+    color: #64ffda;
+    font-size: 20px;
+    line-height: 12px;
+  }
+  .projects{
     height: 720px;
     width: 100vw;
     background: rgb(9, 9, 9);
@@ -503,5 +513,67 @@
     100%{
       filter: hue-rotate(360deg);
     }
+  }
+
+  .contact{
+    height: 780px;
+    width: 100vw;
+    background: rgb(9, 9, 9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .contactDiscription{
+    width: 40vw;
+  }
+  .contactHeader{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 40px;
+    width: 100%;
+    color: #64ffda;
+    font-size: clamp(26px,5vw,32px);
+    white-space: nowrap;
+  }
+  .contactHeader::before{
+    bottom: 4px;
+    content: "04.";
+    margin-right: 10px;
+    color: #64ffda;
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .hello{
+    background: transparent;
+    align-items: center;
+    width: 150px;
+    font-size: 20px;
+    height: 40px;
+    border: 1px solid #64ffda;
+    text-decoration: none;
+    border-radius: 4px;
+    justify-content: center;
+    --b: 0.1em;   /* the thickness of the line */
+    --c: #fff; /* the color */
+    
+    color: #64ffda;
+    padding: 10px;
+    background: 
+      linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+  }
+  .hello:hover{
+    cursor: pointer;
+    color: #fff;
+    --_p: 100%;
+    --_s: .3s;
+    border: 1px solid rgb(8, 8, 8);
   }
   
