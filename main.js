@@ -50,3 +50,8 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+
+function checkAll() {
+  let inputs = document.getElementById('active');
+  inputs.checked = false;
+}

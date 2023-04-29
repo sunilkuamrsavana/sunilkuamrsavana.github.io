@@ -19,10 +19,20 @@
               <a class="btn1" onclick="smoothScroll(document.getElementById('about'));">ABOUT</a>
               <a class="btn1" onclick="smoothScroll(document.getElementById('experience'));">EXPERIENCE</a>
               <a class="btn1" onclick="smoothScroll(document.getElementById('projects'));">PROJECTS</a>
-              <a class="btn1"onclick="smoothScroll(document.getElementById('contact'));">CONTACT</a>
+              <a class="btn1" onclick="smoothScroll(document.getElementById('contact'));">CONTACT</a>
             </div>
             <div class="bars">
-                <i class="fa-solid fa-bars"></i>
+                <input type="checkbox" id="active">
+                <label for="active" class="menu-btn" onclick="myFunction('wrapper','block');"><i class="fas fa-bars"></i></label>
+                <div class="wrapper" id="wrapper">
+                    <ul>
+                        <li><a onclick="smoothScroll(document.getElementById('home'));checkAll()">HOME</a></li>
+                        <li><a onclick="smoothScroll(document.getElementById('about'));checkAll()">ABOUT</a></li>
+                        <li><a onclick="smoothScroll(document.getElementById('experience'));checkAll()">EXPERIENCE</a></li>
+                        <li><a onclick="smoothScroll(document.getElementById('projects'));checkAll()">PROJECTS</a></li>
+                        <li><a onclick="smoothScroll(document.getElementById('contact'));checkAll()">CONTACT</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="mainBody">
@@ -53,8 +63,33 @@
                 </div>
             </div>
             <div class="about" id="about">
+                <div class="AboutDiscription">
+                    <div class="aboutHeader">About Me</div>
+                    Hello! My name is Sunil and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+                    <p style="padding: 0px; margin: 0px; margin-top: 30px;">
+                        Fast-forward to today, and I've had the privilege of working at Anora Instrumentation Private Limited. My main focus these days is building accessible, inclusive products and digital experiences at Anora for a variety of clients.
+                    </p>
+                    <p style="padding: 0px;margin-top: 30px;">
+                        Here are a few technologies I've been working with recently:
+                    </p>
+                    <ul class="skills">
+                        <li>JavaScript (ES6+)</li>
+                        <li>TypeScript</li>
+                        <li>React</li>
+                        <li>Eleventy</li>
+                        <li>Node.js</li>
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+                <div class="AboutProfile">
+                    <img src="./aboutProfile.png">
+                </div>
             </div>    
             <div class="experience" id="experience">
+                <div class="experienceDiscription">
+                    <p class="experienceHeader">Where I've Worked</p>
+                    
+                </div>
             </div>
             <div class="projects" id="projects">
 
