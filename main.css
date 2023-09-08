@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 *{
     padding: 0px;
     margin: 0px;
@@ -300,7 +301,8 @@
     background: rgb(9, 9, 9);
     display: flex;
     justify-content: center;
-    padding: 150px 0px;
+    padding: 200px 0px;
+    gap: 40px;
   }
   .aboutHeader{
     display: flex;
@@ -336,7 +338,7 @@
   }
   .AboutProfile {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     margin-bottom: 50px;
   }
@@ -366,12 +368,13 @@
   }
   .experience{
     width: 100vw;
+    height: 780px;
     background: rgb(9, 9, 9);
     font-size: 20px;
-    padding: 90px 0px;
-    display: flex;
-    justify-content: center;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .experienceDiscription{
     width: 80vw;
@@ -494,23 +497,7 @@
     gap: 15px;
     font-size: 12px;
   }
-  .wrapper{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
-    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
-    background: #000;
-    clip-path: circle(25px at calc(100% - 45px) 45px);
-    transition: all 0.3s ease-in-out;
-  }
-  #active:checked ~ .wrapper{
-    clip-path: circle(75%);
-  }
+
   .menu-btn{
     position: absolute;
     z-index: 2;
@@ -530,58 +517,6 @@
    /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
     background: #000;
     transition: all 0.3s ease-in-out;
-  }
-  #active:checked ~ .menu-btn{
-    color: #fff;
-  }
-  #active:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-  .wrapper ul{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-  }
-  .wrapper ul li{
-    margin: 15px 0;
-  }
-  .wrapper ul li a{
-    color: none;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 500;
-    padding: 5px 30px;
-    color: #fff;
-    border-radius: 50px;
-    background: #000;
-    position: relative;
-    line-height: 50px;
-    transition: all 0.3s ease;
-  }
-  .wrapper ul li a:after{
-    position: absolute;
-    content: "";
-    background: #fff;
-     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
-    width: 104%;
-    height: 110%;
-    left: -2%;
-    top: -5%; /* if the font is 'Oswald'*/
-    border-radius: 50px;
-    transform: scaleY(0);
-    z-index: -1;
-    animation: rotate 1.5s linear infinite;
-    transition: transform 0.3s ease;
-  }
-  .wrapper ul li a:hover:after{
-    transform: scaleY(1);
-  }
-  .wrapper ul li a:hover{
-    color: #fff;
   }
   
   @keyframes rotate {
@@ -724,13 +659,13 @@
     border-radius: 0.25rem;
     box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
     display: flex;
+    background: #233554;
     flex-direction: column;
     overflow: hidden;
   }
   
   .card_content {
     padding: 1rem;
-    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
   }
   
   .card_title {
@@ -782,4 +717,73 @@
     color: #64ffda;
     font-size: 30px;
     font-weight: 400;
+  }
+  .wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    background: #000;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  #active:checked ~ .menu-btn{
+    color: #fff;
+  }
+  #active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper ul li{
+    margin: 15px 0;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    border-radius: 50px;
+    background: #000;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  .wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: #fff;
+     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top: -5%; /* if the font is 'Oswald'*/
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+  }
+  .wrapper ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .wrapper ul li a:hover{
+    color: #fff;
   }

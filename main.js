@@ -48,10 +48,12 @@ window.onscroll = function() {
     document.getElementById("navbar").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
-}
+};
 
 
 function checkAll() {
   let inputs = document.getElementById('active');
   inputs.checked = false;
-}
+};
+
+
